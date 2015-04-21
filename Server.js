@@ -27,8 +27,8 @@ function massMailer() {
 	transporter = nodemailer.createTransport({
 		service: "Gmail",
 		auth: {
-			user: "shahid@reach1to1.com",
-			pass: "shahid598"
+			user: "", // User name
+			pass: "" // Password
 		}
 	});
 	// Fetch all the emails from database and push it in listofemails
