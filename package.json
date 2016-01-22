@@ -4,6 +4,6 @@
   "dependencies": {
     "async": "~0.9.0",
     "mongoose": "^4.0.1",
-    "nodemailer": "^1.3.2"
+    "nodemailer": "latest"
   }
 }
