@@ -24,12 +24,15 @@ var transporter;
 
 function massMailer() {
 	var self = this;
-	transporter = nodemailer.createTransport({
-		service: "Gmail",
-		auth: {
-			user: "", // User name
-			pass: "" // Password
-		}
+	transporter = nodemailer.createTransport("SMTP",{
+	    host: 'smtp.gmail.com',
+	    port: 587,
+	    auth: {
+	        user: '',
+	        pass: ''
+	    },
+    	    tls: {rejectUnauthorized: false},
+    	    debug:true
 	});
 	// Fetch all the emails from database and push it in listofemails
 	self.invokeOperation();
